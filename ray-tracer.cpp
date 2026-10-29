@@ -172,12 +172,14 @@ int main()
       float area_two = minus_three.cross(minus_one).length()/2;
       float area_three = minus_one.cross(minus_two).length()/2;
 
+      // Each corner's share of the triangle
       float u = area_one/triangle_area;
       float v = area_two/triangle_area;
       float a = area_three/triangle_area;
 
       float sum = u + v + a;
 
+      // measure how far sum is from 1 
       float diff = abs(1-sum);
 
       if(diff > .00001){
